@@ -1,0 +1,44 @@
+﻿<Window x:Class="DecoderTeltonika.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DecoderTeltonika"
+        mc:Ignorable="d"
+        Title="Decodificador Teltonika" Height="155" Width="700" MinHeight="150" MinWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="100"></ColumnDefinition>
+                <ColumnDefinition Width ="*"></ColumnDefinition>
+                <ColumnDefinition Width ="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="2" x:Name="BTNenviarArchivo" Content="Enviar Archivo" HorizontalAlignment="Stretch" VerticalAlignment="Center" Click="BTNenviarArchivo_Click" Width="93"/>
+            <TextBox Grid.Column="1" x:Name="DireccionLog" Text="Ubicación" TextWrapping="Wrap" VerticalAlignment="Center" 
+                     Height="26" Foreground="Gray" FontStyle="Italic" FontSize="14" HorizontalAlignment="Stretch" Margin="5" />
+            <Button Grid.Column="0" x:Name="BTNguardarEn" Content="Guardar Log en..." HorizontalAlignment="Stretch" VerticalAlignment="Center" Click="BTNguardarEn_Click" Width="95"/>
+
+        </Grid>
+        <Grid Grid.Row="1" Height="auto" MinHeight="80">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="200"></ColumnDefinition>
+                <ColumnDefinition Width ="*"></ColumnDefinition>
+                <ColumnDefinition Width ="200"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Height="80" Grid.Column="0" Source="teltonika.jpg" HorizontalAlignment ="Stretch" VerticalAlignment="Stretch"/>
+            <Image Height="80" Grid.Column="2" Source="image001.png" HorizontalAlignment ="Stretch" VerticalAlignment="Stretch"/>
+
+
+
+        </Grid>
+
+
+
+    </Grid>
+</Window>
